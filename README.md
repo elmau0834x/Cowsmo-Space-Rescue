@@ -314,4 +314,56 @@ Los recursos visuales se mantienen separados de acuerdo con su finalidad, permit
 
 Las imágenes se referencian desde el README mediante rutas relativas al directorio raíz del repositorio, conservando su ubicación original.
 
+## Requisitos previos
 
+Para trabajar con Cowsmo: Space Rescue es necesario contar con las herramientas de desarrollo correspondientes a cada componente del ecosistema.
+
+### Herramientas generales
+
+| Herramienta | Uso |
+|---|---|
+| Git | Control de versiones del proyecto. |
+| GitHub | Acceso al repositorio y colaboración entre desarrolladores. |
+| Docker | Contenedorización de los servicios del backend. |
+
+### Desarrollo del videojuego
+
+| Herramienta | Uso |
+|---|---|
+| Unity Hub | Administración de instalaciones y proyectos de Unity. |
+| Unity 6 | Motor de desarrollo del videojuego. |
+| Visual Studio o editor compatible | Edición y desarrollo de scripts en C#. |
+
+### Desarrollo de la aplicación móvil
+
+| Herramienta | Uso |
+|---|---|
+| Flutter SDK | Framework de desarrollo de la aplicación móvil. |
+| Dart SDK | Lenguaje de programación utilizado por Flutter. |
+| Android Studio | Entorno de desarrollo y herramientas para ejecutar la aplicación en Android. |
+
+### Desarrollo de la aplicación web progresiva
+
+| Herramienta | Uso |
+|---|---|
+| Node.js | Entorno de ejecución necesario para el ecosistema de herramientas de React. |
+| npm | Administración de dependencias y paquetes. |
+| React | Biblioteca de desarrollo de interfaces web. |
+| Navegador web actualizado | Ejecución y validación de la aplicación web progresiva. |
+
+### Desarrollo del backend y bases de datos
+
+| Herramienta | Uso |
+|---|---|
+| Python | Lenguaje de programación del backend. |
+| FastAPI | Framework para el desarrollo de la API REST. |
+| MongoDB | Base de datos principal de la API. |
+| MySQL | Base de datos complementaria del videojuego. |
+| Docker | Ejecución de servicios contenerizados. |
+
+### Consideraciones adicionales
+
+1. Es necesario contar con conexión a Internet para descargar dependencias, acceder al repositorio y utilizar los servicios remotos.
+2. Se requiere acceso al repositorio de GitHub para obtener el código fuente.
+3. Las versiones específicas de las herramientas deberán corresponder con las configuraciones y dependencias establecidas en cada componente del proyecto.
+4. Para utilizar los servicios desplegados en la nube será necesario contar con la configuración y los permisos correspondientes.
