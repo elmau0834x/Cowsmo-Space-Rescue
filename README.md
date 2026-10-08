@@ -524,3 +524,69 @@ docker compose down
 - La PWA y la aplicación móvil deben utilizar la dirección de la API configurada para el entorno correspondiente.
 - Las bases de datos deben encontrarse disponibles antes de ejecutar las operaciones que requieran persistencia.
 - El videojuego podrá ejecutarse de manera local y sincronizar su información cuando tenga conexión con los servicios del ecosistema.
+
+## Uso del sistema
+
+Cowsmo: Space Rescue ofrece diferentes formas de interacción mediante su videojuego, aplicación móvil y aplicación web progresiva. Cada producto proporciona funcionalidades específicas y comparte información mediante una cuenta de usuario centralizada.
+
+### 1. Acceso al ecosistema
+
+Los usuarios podrán acceder a los productos disponibles utilizando una cuenta compartida.
+
+El proceso general contempla:
+
+1. Ingresar al videojuego, aplicación móvil o PWA.
+2. Registrarse o iniciar sesión con una cuenta.
+3. Acceder a las funcionalidades disponibles según el producto.
+4. Consultar la información personal y los datos sincronizados del ecosistema.
+
+### 2. Uso del videojuego
+
+El videojuego permite disfrutar de una experiencia de aventura y exploración 2.5D protagonizada por Moo-ry.
+
+Los jugadores podrán:
+
+- Explorar los diferentes escenarios y niveles.
+- Interactuar con personajes y elementos del entorno.
+- Recolectar recursos y objetos.
+- Participar en actividades relacionadas con la recuperación ambiental.
+- Consultar su progreso y puntuaciones.
+- Guardar su avance localmente y sincronizarlo con la nube.
+
+### 3. Uso de la aplicación móvil
+
+La aplicación móvil permite acceder a funcionalidades complementarias del videojuego.
+
+Los usuarios podrán:
+
+- Consultar y administrar su perfil.
+- Visualizar estadísticas y progreso.
+- Consultar rankings.
+- Acceder a consejos y actividades ambientales.
+- Consultar información sobre reciclaje y sostenibilidad.
+- Dar seguimiento a sus acciones sostenibles.
+
+### 4. Uso de la aplicación web progresiva (PWA)
+
+La PWA proporciona acceso al ecosistema desde un navegador web.
+
+Entre sus funcionalidades se encuentran:
+
+- Iniciar sesión y consultar el perfil.
+- Visualizar estadísticas y rankings.
+- Consultar contenido educativo.
+- Publicar contenido sujeto a revisión administrativa.
+- Acceder a Wiki-Cowsmo.
+- Consultar contenido previamente almacenado sin conexión a Internet.
+
+### 5. Sincronización de información
+
+Los tres productos compartirán información mediante el backend y los servicios de almacenamiento del ecosistema.
+
+Esto permitirá mantener disponibles los datos relacionados con las cuentas, estadísticas, puntuaciones y progreso de los jugadores, de acuerdo con los mecanismos de sincronización implementados.
+
+### 6. Administración de contenido
+
+El ecosistema contempla la participación de los usuarios mediante la publicación de contenido educativo.
+
+Las publicaciones estarán sujetas a un proceso de revisión administrativa antes de su disponibilidad dentro de la plataforma.
