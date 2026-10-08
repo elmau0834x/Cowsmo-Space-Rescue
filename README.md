@@ -448,3 +448,79 @@ Para proteger la información del proyecto, se deben considerar las siguientes m
 - Proporcionar un archivo `.env.example` con las variables necesarias, sin valores sensibles.
 - Utilizar claves de autenticación seguras.
 - Restringir el acceso a las bases de datos y servicios según los permisos correspondientes.
+
+## Ejecución
+
+Una vez instaladas las herramientas, configuradas las variables de entorno y preparados los servicios correspondientes, se podrá iniciar cada componente del ecosistema de manera independiente.
+
+### 1. Backend — FastAPI
+
+Para iniciar el servidor de desarrollo, accede al directorio del backend y ejecuta:
+
+```bash
+uvicorn main:app --reload
+```
+
+El servidor iniciará en la dirección local configurada, permitiendo que los demás componentes realicen solicitudes a la API.
+
+### 2. Aplicación web progresiva — React
+
+Accede al directorio de la PWA e instala las dependencias del proyecto:
+
+```bash
+npm install
+```
+
+Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en la dirección local indicada por Vite.
+
+### 3. Aplicación móvil — Flutter
+
+Accede al directorio de la aplicación móvil y ejecuta:
+
+```bash
+flutter pub get
+```
+
+Para iniciar la aplicación en un dispositivo o emulador conectado:
+
+```bash
+flutter run
+```
+
+### 4. Videojuego — Unity
+
+Para ejecutar el videojuego:
+
+1. Abre Unity Hub.
+2. Selecciona la opción para agregar un proyecto existente.
+3. Busca el directorio del videojuego dentro del repositorio.
+4. Abre el proyecto utilizando Unity 6.
+5. Espera a que Unity importe los recursos y dependencias.
+6. Abre la escena principal y presiona el botón **Play** para iniciar la ejecución.
+
+### 5. Servicios mediante Docker
+
+Los servicios contenerizados podrán iniciarse mediante Docker Compose, una vez que se encuentre disponible el archivo de configuración correspondiente.
+
+```bash
+docker compose up --build
+```
+
+Para detener los servicios:
+
+```bash
+docker compose down
+```
+
+### Consideraciones de ejecución
+
+- El backend debe estar disponible para permitir la comunicación con los clientes.
+- La PWA y la aplicación móvil deben utilizar la dirección de la API configurada para el entorno correspondiente.
+- Las bases de datos deben encontrarse disponibles antes de ejecutar las operaciones que requieran persistencia.
+- El videojuego podrá ejecutarse de manera local y sincronizar su información cuando tenga conexión con los servicios del ecosistema.
