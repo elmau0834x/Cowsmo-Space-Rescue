@@ -208,3 +208,57 @@ El desarrollo de Cowsmo: Space Rescue utiliza diferentes tecnologías para imple
 | GitHub | Plataforma para alojar repositorios y gestionar la colaboración del equipo. |
 | Jira | Herramienta de apoyo para la organización y seguimiento de actividades del proyecto. |
 | SCRUM | Marco de trabajo ágil utilizado para organizar y gestionar el desarrollo del proyecto. |
+
+## Arquitectura del sistema
+
+Cowsmo: Space Rescue utiliza una arquitectura cliente-servidor centralizada que permite integrar el videojuego, la aplicación móvil y la aplicación web progresiva mediante servicios compartidos.
+
+Los tres productos se comunican con un backend desarrollado en Python utilizando FastAPI, encargado de gestionar la autenticación, la lógica de negocio, el procesamiento de solicitudes y el acceso a las bases de datos.
+
+### Componentes principales
+
+| Componente | Tecnología | Responsabilidad |
+|---|---|---|
+| Videojuego | Unity | Gestionar la experiencia de juego, los niveles, las puntuaciones y el progreso del jugador. |
+| Aplicación móvil | Flutter | Proporcionar acceso a las funcionalidades complementarias del ecosistema desde dispositivos móviles. |
+| Aplicación web | React (PWA) | Permitir el acceso web a perfiles, rankings, contenido educativo y Wiki-Cowsmo. |
+| Backend | Python + FastAPI | Centralizar la lógica de negocio y la comunicación entre los productos. |
+| Base de datos principal | MongoDB | Almacenar la información gestionada por la API. |
+| Base de datos complementaria | MySQL | Almacenar información estructurada relacionada con el videojuego. |
+| Infraestructura | Docker + Google Cloud Run | Contenerizar y ejecutar los servicios en la nube. |
+
+### Comunicación entre componentes
+
+La comunicación del ecosistema se organiza mediante los siguientes procesos:
+
+1. Los usuarios acceden al videojuego, la aplicación móvil o la PWA utilizando una cuenta compartida.
+2. Los productos realizan solicitudes al backend mediante la API.
+3. FastAPI procesa las solicitudes, valida la autenticación y ejecuta la lógica correspondiente.
+4. El backend consulta o actualiza la información almacenada en MongoDB y MySQL, según el tipo de operación.
+5. Los resultados se devuelven al producto correspondiente para su presentación al usuario.
+6. La información que requiere sincronización se mantiene disponible para los diferentes componentes del ecosistema.
+
+### Persistencia de información
+
+El proyecto contempla una arquitectura de almacenamiento híbrida:
+
+- **MongoDB:** almacena la información principal administrada por la API, incluyendo usuarios, contenido, puntuaciones y rankings.
+- **MySQL:** almacena información estructurada y complementaria del videojuego.
+- **Almacenamiento local:** permite conservar información y progreso del videojuego en el dispositivo.
+- **Almacenamiento en la nube:** permite mantener información remota y sincronizar el progreso entre plataformas.
+
+### Infraestructura y despliegue
+
+Los servicios del backend utilizarán Docker para empaquetar sus componentes y dependencias en contenedores.
+
+Google Cloud Run será la plataforma de ejecución en la nube para los servicios contenerizados, proporcionando la infraestructura necesaria para su disponibilidad y comunicación con los productos del ecosistema.
+
+### Diagrama de arquitectura
+
+El siguiente diagrama representa la arquitectura general del proyecto:
+
+<p align="center">
+  <img src="./Docs/image/Diagramas/Diagrama de Arquitectura.jpg" alt="Diagrama de arquitectura de Cowsmo: Space Rescue" width="850"/>
+</p>
+
+
