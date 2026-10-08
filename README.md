@@ -712,3 +712,53 @@ Los totales se obtendrán del historial de Git, considerando los commits asociad
 | Mauricio Rosales Gabriel | [@elmau0834x](https://github.com/elmau0834x) |
 | Carlos Daniel García Pluma | [@DanielGarciaPluma](https://github.com/DanielGarciaPluma) |
 | Brisa Nallely García Gregorio | [@Brisgregorio](https://github.com/Brisgregorio) |
+
+## Versionamiento
+
+Cowsmo: Space Rescue utiliza Git como sistema de control de versiones y GitHub como plataforma de alojamiento del repositorio, permitiendo mantener un historial de cambios y facilitar la colaboración entre los integrantes del equipo.
+
+### 1. Control de versiones
+
+El proyecto utiliza las siguientes herramientas:
+
+| Herramienta | Función |
+|---|---|
+| Git | Administrar el historial de cambios del código fuente. |
+| GitHub | Alojar el repositorio y facilitar la colaboración del equipo. |
+
+### 2. Esquema de versionamiento
+
+Se propone utilizar el esquema de versionamiento semántico (Semantic Versioning), siguiendo el formato:
+
+```text
+MAJOR.MINOR.PATCH
+```
+
+Donde:
+
+- **MAJOR:** identifica cambios importantes que pueden introducir incompatibilidades.
+- **MINOR:** representa la incorporación de nuevas funcionalidades compatibles.
+- **PATCH:** identifica correcciones de errores y ajustes menores.
+
+### 3. Historial de versiones
+
+El historial de versiones permitirá registrar los principales avances y modificaciones realizadas durante el desarrollo.
+
+| Versión | Fecha | Descripción |
+|---|---|---|
+| 0.1.0 | Por determinar | Inicio del desarrollo del ecosistema Cowsmo: Space Rescue. |
+| En desarrollo | — | Implementación de los componentes del proyecto. |
+
+### 4. Registro de cambios
+
+Se contempla utilizar un archivo `CHANGELOG.md` para documentar de manera detallada las modificaciones realizadas en cada versión.
+
+Este archivo permitirá identificar:
+
+- Nuevas funcionalidades incorporadas.
+- Correcciones de errores.
+- Mejoras en los componentes existentes.
+- Cambios en la arquitectura.
+- Modificaciones relevantes en la documentación.
+
+
