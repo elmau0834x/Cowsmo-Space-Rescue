@@ -102,3 +102,51 @@ Busca ofrecer una experiencia accesible para:
 - Usuarios que buscan contenido relacionado con la educación ambiental.
 - Personas interesadas en el reciclaje y la sostenibilidad.
 - Usuarios que desean participar en actividades y compartir contenido educativo.
+
+## Características principales
+
+Cowsmo: Space Rescue integra funcionalidades de entretenimiento, gestión de información, educación ambiental y participación de usuarios mediante tres productos conectados.
+
+### Videojuego 2.5D — Unity
+
+- Exploración de escenarios y niveles.
+- Interacción con personajes y elementos del entorno.
+- Mecánicas de recolección de residuos tecnológicos.
+- Restauración de ecosistemas mediante actividades dentro del juego.
+- Sistema de niveles y progresión.
+- Objetos, recursos y coleccionables.
+- Sistema de puntuaciones y rankings.
+- Guardado local y sincronización del progreso en la nube.
+
+### Aplicación móvil — Flutter
+
+- Registro e inicio de sesión.
+- Administración del perfil de usuario.
+- Consulta de información relacionada con el videojuego.
+- Visualización de estadísticas y progreso.
+- Consulta de rankings.
+- Consejos y actividades educativas ambientales.
+- Información sobre reciclaje y sostenibilidad.
+- Seguimiento de acciones sostenibles.
+- Acceso a contenido educativo.
+
+### Aplicación web progresiva — React PWA
+
+- Autenticación de usuarios.
+- Consulta y administración de información del perfil.
+- Visualización de estadísticas y rankings.
+- Acceso a contenido educativo.
+- Publicación de contenido por parte de los usuarios, sujeto a revisión administrativa.
+- Acceso a Wiki-Cowsmo.
+- Consulta de contenido previamente disponible sin conexión a Internet mediante mecanismos de almacenamiento en caché.
+
+### Servicios compartidos del ecosistema
+
+- Sistema de cuentas compartidas entre el videojuego, la aplicación móvil y la PWA.
+- Autenticación mediante JWT con Access Token y Refresh Token.
+- Comunicación centralizada mediante una API.
+- Sincronización de información y progreso de los jugadores.
+- Gestión de puntuaciones y rankings globales y por temporadas.
+- Administración y revisión de contenido publicado por los usuarios.
+
+Estas características permitirán ofrecer una experiencia integrada, en la que cada producto tendrá funcionalidades propias y compartirá información con los demás componentes del ecosistema.
