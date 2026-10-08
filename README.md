@@ -208,5 +208,3 @@ El desarrollo de Cowsmo: Space Rescue utiliza diferentes tecnologías para imple
 | GitHub | Plataforma para alojar repositorios y gestionar la colaboración del equipo. |
 | Jira | Herramienta de apoyo para la organización y seguimiento de actividades del proyecto. |
 | SCRUM | Marco de trabajo ágil utilizado para organizar y gestionar el desarrollo del proyecto. |
-
-
