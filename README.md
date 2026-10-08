@@ -150,3 +150,63 @@ Cowsmo: Space Rescue integra funcionalidades de entretenimiento, gestión de inf
 - Administración y revisión de contenido publicado por los usuarios.
 
 Estas características permitirán ofrecer una experiencia integrada, en la que cada producto tendrá funcionalidades propias y compartirá información con los demás componentes del ecosistema.
+
+## Tecnologías utilizadas
+
+El desarrollo de Cowsmo: Space Rescue utiliza diferentes tecnologías para implementar sus tres productos y los servicios que permiten su integración. La selección tecnológica busca facilitar la comunicación entre componentes, la administración de información y la disponibilidad multiplataforma.
+
+### Videojuego — Unity
+
+| Tecnología | Función |
+|---|---|
+| Unity 6 | Motor de desarrollo del videojuego 2.5D. |
+| C# | Lenguaje de programación para implementar mecánicas, comportamientos y sistemas del videojuego. |
+| Universal Render Pipeline (URP) | Canal de renderizado para la representación gráfica del videojuego. |
+
+### Aplicación móvil — Flutter
+
+| Tecnología | Función |
+|---|---|
+| Flutter | Framework para desarrollar la aplicación móvil multiplataforma. |
+| Dart | Lenguaje de programación utilizado para implementar la aplicación. |
+
+### Aplicación web progresiva — React PWA
+
+| Tecnología | Función |
+|---|---|
+| React | Biblioteca para desarrollar las interfaces de usuario de la aplicación web. |
+| Vite | Herramienta para el desarrollo y construcción de la aplicación web. |
+| PWA | Tecnología que permite ofrecer funcionalidades propias de una aplicación web progresiva, incluyendo disponibilidad parcial sin conexión. |
+
+### Backend y servicios
+
+| Tecnología | Función |
+|---|---|
+| Python | Lenguaje de programación utilizado para desarrollar los servicios del backend. |
+| FastAPI | Framework para construir la API REST y gestionar la comunicación entre los productos del ecosistema. |
+| JWT | Mecanismo de autenticación mediante Access Token y Refresh Token. |
+
+### Bases de datos
+
+| Tecnología | Función |
+|---|---|
+| MongoDB | Base de datos principal de la API para almacenar usuarios, contenido, puntuaciones y rankings. |
+| MySQL | Base de datos complementaria para almacenar información estructurada del videojuego. |
+
+### Infraestructura y despliegue
+
+| Tecnología | Función |
+|---|---|
+| Docker | Herramienta para la contenedorización de los servicios y sus dependencias. |
+| Google Cloud Run | Plataforma de ejecución en la nube para los servicios contenerizados. |
+
+### Gestión y control de versiones
+
+| Tecnología | Función |
+|---|---|
+| Git | Sistema de control de versiones para administrar los cambios del código fuente. |
+| GitHub | Plataforma para alojar repositorios y gestionar la colaboración del equipo. |
+| Jira | Herramienta de apoyo para la organización y seguimiento de actividades del proyecto. |
+| SCRUM | Marco de trabajo ágil utilizado para organizar y gestionar el desarrollo del proyecto. |
+
+
