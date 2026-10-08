@@ -367,3 +367,84 @@ Para trabajar con Cowsmo: Space Rescue es necesario contar con las herramientas 
 2. Se requiere acceso al repositorio de GitHub para obtener el código fuente.
 3. Las versiones específicas de las herramientas deberán corresponder con las configuraciones y dependencias establecidas en cada componente del proyecto.
 4. Para utilizar los servicios desplegados en la nube será necesario contar con la configuración y los permisos correspondientes.
+
+## Instalación
+
+Sigue los siguientes pasos para obtener el código fuente del proyecto y preparar el entorno de desarrollo.
+
+## Configuración
+
+Cowsmo: Space Rescue requiere configurar los servicios del backend, las conexiones a las bases de datos y los mecanismos de autenticación para permitir la comunicación entre el videojuego, la aplicación móvil y la PWA.
+
+### 1. Variables de entorno
+
+El backend utilizará variables de entorno para administrar la configuración de sus servicios y conexiones.
+
+A continuación, se presenta una propuesta de las principales variables de configuración:
+
+```env
+# Configuración del servidor
+HOST=
+PORT=
+
+# Configuración de seguridad
+JWT_SECRET_KEY=
+ACCESS_TOKEN_EXPIRE_MINUTES=
+REFRESH_TOKEN_EXPIRE_DAYS=
+
+# Conexión a MongoDB
+MONGODB_URI=
+MONGODB_DATABASE=
+
+# Conexión a MySQL
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=
+MYSQL_PASSWORD=
+MYSQL_DATABASE=
+
+# Configuración de la aplicación
+ENVIRONMENT=
+```
+
+### 2. Configuración de las bases de datos
+
+El ecosistema utiliza dos sistemas de almacenamiento con responsabilidades diferenciadas:
+
+**MongoDB**
+
+Se utilizará como base de datos principal de la API para almacenar información relacionada con:
+
+- Usuarios.
+- Contenido del ecosistema.
+- Puntuaciones.
+- Rankings.
+
+**MySQL**
+
+Se utilizará como base de datos complementaria para almacenar información estructurada relacionada con el videojuego.
+
+### 3. Configuración de autenticación
+
+El sistema de autenticación utilizará JSON Web Tokens (JWT) para gestionar el acceso de los usuarios a los diferentes productos del ecosistema.
+
+Se contemplan dos tipos de tokens:
+
+- **Access Token:** utilizado para autenticar las solicitudes realizadas a los servicios protegidos.
+- **Refresh Token:** utilizado para renovar las sesiones sin requerir que el usuario vuelva a iniciar sesión constantemente.
+
+### 4. Configuración de servicios
+
+Los servicios del backend utilizarán Docker para su contenedorización y Google Cloud Run como plataforma de ejecución en la nube.
+
+Las configuraciones de conexión y despliegue deberán establecerse mediante las variables de entorno correspondientes a cada servicio.
+
+### 5. Seguridad de la configuración
+
+Para proteger la información del proyecto, se deben considerar las siguientes medidas:
+
+- No publicar contraseñas, tokens ni credenciales reales.
+- Mantener los archivos `.env` fuera del control de versiones.
+- Proporcionar un archivo `.env.example` con las variables necesarias, sin valores sensibles.
+- Utilizar claves de autenticación seguras.
+- Restringir el acceso a las bases de datos y servicios según los permisos correspondientes.
