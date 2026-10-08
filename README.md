@@ -261,4 +261,57 @@ El siguiente diagrama representa la arquitectura general del proyecto:
   <img src="./Docs/image/Diagramas/Diagrama de Arquitectura.jpg" alt="Diagrama de arquitectura de Cowsmo: Space Rescue" width="850"/>
 </p>
 
+## Estructura del proyecto
+
+El repositorio de Cowsmo: Space Rescue organiza los archivos del proyecto, recursos gráficos y documentación en directorios que facilitan su identificación y mantenimiento.
+
+### Organización de directorios
+
+```text
+Cowsmo-Space-Rescue/
+│
+├── Docs/
+│   └── image/
+│       │
+│       ├── Colors/
+│       │   ├── Entorno Contaminado & Chatarra (Nébularis _ Dominio Industrial).png
+│       │   ├── Entorno Limpio & Bio-Bloom (Verdalia _ Planeta Restaurado).png
+│       │   ├── Interfaz de Usuario & Materiales Teatrales (UI _ HUD).png
+│       │   └── Protagonista e Identidad (Moo-Ry & Logo).png
+│       │
+│       ├── Diagramas/
+│       │   ├── Business Model Canvas.jpg
+│       │   ├── Cronograma del Proyecto.jpg
+│       │   ├── Diagrama de Arquitectura.jpg
+│       │   ├── Diagrama de roles de Cowsmo.png
+│       │   ├── Diagrama de Roles de Usuario.jpeg
+│       │   ├── Estructura Organizacional.jpg
+│       │   └── Portada del juego.jpeg
+│       │
+│       ├── GameLogo.png
+│       ├── Logo sin fondo.png
+│       └── Logo.jpg
+│
+└── README.md
+```
+
+### Descripción de los directorios
+
+| Directorio o archivo | Descripción |
+|---|---|
+| `Docs/` | Contiene recursos relacionados con la documentación del proyecto. |
+| `Docs/image/` | Almacena los recursos gráficos utilizados en el repositorio y el README. |
+| `Docs/image/Colors/` | Contiene las imágenes de las paletas de colores oficiales del proyecto. |
+| `Docs/image/Diagramas/` | Almacena los diagramas, modelos visuales, cronograma y portada del videojuego. |
+| `GameLogo.png` | Logotipo de Cowsmo: Space Rescue. |
+| `Logo sin fondo.png` | Logotipo de Orbital Create. |
+| `Logo.jpg` | Recurso gráfico adicional de identidad del proyecto. |
+| `README.md` | Archivo principal de presentación y documentación del repositorio. |
+
+### Organización de los recursos gráficos
+
+Los recursos visuales se mantienen separados de acuerdo con su finalidad, permitiendo reutilizarlos en la documentación y facilitar su mantenimiento.
+
+Las imágenes se referencian desde el README mediante rutas relativas al directorio raíz del repositorio, conservando su ubicación original.
+
 
