@@ -590,3 +590,75 @@ Esto permitirá mantener disponibles los datos relacionados con las cuentas, est
 El ecosistema contempla la participación de los usuarios mediante la publicación de contenido educativo.
 
 Las publicaciones estarán sujetas a un proceso de revisión administrativa antes de su disponibilidad dentro de la plataforma.
+
+## Pruebas
+
+El proyecto contempla diferentes actividades de pruebas orientadas a comprobar el correcto funcionamiento de sus productos, validar la integración de sus servicios y detectar posibles errores durante el desarrollo.
+
+### 1. Pruebas del videojuego
+
+Se realizarán pruebas para verificar:
+
+- Funcionamiento de las mecánicas de juego.
+- Movimiento e interacción de los personajes.
+- Funcionamiento de los niveles y sistemas de progresión.
+- Registro y conservación del progreso.
+- Sincronización de información con los servicios del ecosistema.
+- Compatibilidad con las plataformas previstas.
+
+### 2. Pruebas de la aplicación móvil
+
+Se contemplan pruebas para validar:
+
+- Registro e inicio de sesión.
+- Administración del perfil de usuario.
+- Comunicación con el backend.
+- Consulta de estadísticas y rankings.
+- Visualización del contenido educativo.
+- Funcionamiento de las funcionalidades complementarias.
+
+### 3. Pruebas de la aplicación web progresiva
+
+Se verificarán los siguientes aspectos:
+
+- Funcionamiento de la autenticación.
+- Navegación entre las diferentes secciones.
+- Consulta y administración de información.
+- Visualización de estadísticas y rankings.
+- Publicación y revisión de contenido.
+- Acceso a Wiki-Cowsmo.
+- Disponibilidad parcial de contenido sin conexión a Internet.
+
+### 4. Pruebas del backend y servicios
+
+Se realizarán pruebas para comprobar:
+
+- Funcionamiento de los endpoints de la API REST.
+- Validación de solicitudes y respuestas.
+- Autenticación mediante JWT.
+- Comunicación con MongoDB y MySQL.
+- Almacenamiento y recuperación de información.
+- Sincronización de datos entre los productos.
+- Manejo de errores y respuestas del servidor.
+
+### 5. Pruebas de integración
+
+Se comprobará la comunicación entre el videojuego, la aplicación móvil, la PWA y el backend, verificando que la información compartida se procese correctamente.
+
+También se evaluará la sincronización de cuentas, estadísticas, puntuaciones y progreso de los jugadores.
+
+### 6. Tipos de pruebas contempladas
+
+| Tipo de prueba | Propósito |
+|---|---|
+| Pruebas unitarias | Verificar el funcionamiento individual de componentes y funciones. |
+| Pruebas de integración | Comprobar la comunicación entre los diferentes servicios y productos. |
+| Pruebas funcionales | Validar que las funcionalidades cumplan con los requerimientos establecidos. |
+| Pruebas de compatibilidad | Comprobar el funcionamiento en las plataformas previstas. |
+| Pruebas de aceptación | Evaluar que el sistema cumpla con las necesidades de los usuarios. |
+
+### 7. Registro de resultados
+
+Los resultados de las pruebas permitirán identificar errores, documentar incidencias y verificar las correcciones realizadas durante el desarrollo.
+
+Las actividades de validación estarán integradas en el proceso de trabajo del equipo mediante el seguimiento de tareas e incidencias.
