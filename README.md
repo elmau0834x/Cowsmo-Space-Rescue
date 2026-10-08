@@ -208,3 +208,457 @@ El desarrollo de Cowsmo: Space Rescue utiliza diferentes tecnologías para imple
 | GitHub | Plataforma para alojar repositorios y gestionar la colaboración del equipo. |
 | Jira | Herramienta de apoyo para la organización y seguimiento de actividades del proyecto. |
 | SCRUM | Marco de trabajo ágil utilizado para organizar y gestionar el desarrollo del proyecto. |
+
+## Arquitectura del sistema
+
+Cowsmo: Space Rescue utiliza una arquitectura cliente-servidor centralizada que permite integrar el videojuego, la aplicación móvil y la aplicación web progresiva mediante servicios compartidos.
+
+Los tres productos se comunican con un backend desarrollado en Python utilizando FastAPI, encargado de gestionar la autenticación, la lógica de negocio, el procesamiento de solicitudes y el acceso a las bases de datos.
+
+### Componentes principales
+
+| Componente | Tecnología | Responsabilidad |
+|---|---|---|
+| Videojuego | Unity | Gestionar la experiencia de juego, los niveles, las puntuaciones y el progreso del jugador. |
+| Aplicación móvil | Flutter | Proporcionar acceso a las funcionalidades complementarias del ecosistema desde dispositivos móviles. |
+| Aplicación web | React (PWA) | Permitir el acceso web a perfiles, rankings, contenido educativo y Wiki-Cowsmo. |
+| Backend | Python + FastAPI | Centralizar la lógica de negocio y la comunicación entre los productos. |
+| Base de datos principal | MongoDB | Almacenar la información gestionada por la API. |
+| Base de datos complementaria | MySQL | Almacenar información estructurada relacionada con el videojuego. |
+| Infraestructura | Docker + Google Cloud Run | Contenerizar y ejecutar los servicios en la nube. |
+
+### Comunicación entre componentes
+
+La comunicación del ecosistema se organiza mediante los siguientes procesos:
+
+1. Los usuarios acceden al videojuego, la aplicación móvil o la PWA utilizando una cuenta compartida.
+2. Los productos realizan solicitudes al backend mediante la API.
+3. FastAPI procesa las solicitudes, valida la autenticación y ejecuta la lógica correspondiente.
+4. El backend consulta o actualiza la información almacenada en MongoDB y MySQL, según el tipo de operación.
+5. Los resultados se devuelven al producto correspondiente para su presentación al usuario.
+6. La información que requiere sincronización se mantiene disponible para los diferentes componentes del ecosistema.
+
+### Persistencia de información
+
+El proyecto contempla una arquitectura de almacenamiento híbrida:
+
+- **MongoDB:** almacena la información principal administrada por la API, incluyendo usuarios, contenido, puntuaciones y rankings.
+- **MySQL:** almacena información estructurada y complementaria del videojuego.
+- **Almacenamiento local:** permite conservar información y progreso del videojuego en el dispositivo.
+- **Almacenamiento en la nube:** permite mantener información remota y sincronizar el progreso entre plataformas.
+
+### Infraestructura y despliegue
+
+Los servicios del backend utilizarán Docker para empaquetar sus componentes y dependencias en contenedores.
+
+Google Cloud Run será la plataforma de ejecución en la nube para los servicios contenerizados, proporcionando la infraestructura necesaria para su disponibilidad y comunicación con los productos del ecosistema.
+
+### Diagrama de arquitectura
+
+El siguiente diagrama representa la arquitectura general del proyecto:
+
+<p align="center">
+  <img src="./Docs/image/Diagramas/Diagrama de Arquitectura.jpg" alt="Diagrama de arquitectura de Cowsmo: Space Rescue" width="850"/>
+</p>
+
+## Estructura del proyecto
+
+El repositorio de Cowsmo: Space Rescue organiza los archivos del proyecto, recursos gráficos y documentación en directorios que facilitan su identificación y mantenimiento.
+
+### Organización de directorios
+
+```text
+Cowsmo-Space-Rescue/
+│
+├── Docs/
+│   └── image/
+│       │
+│       ├── Colors/
+│       │   ├── Entorno Contaminado & Chatarra (Nébularis _ Dominio Industrial).png
+│       │   ├── Entorno Limpio & Bio-Bloom (Verdalia _ Planeta Restaurado).png
+│       │   ├── Interfaz de Usuario & Materiales Teatrales (UI _ HUD).png
+│       │   └── Protagonista e Identidad (Moo-Ry & Logo).png
+│       │
+│       ├── Diagramas/
+│       │   ├── Business Model Canvas.jpg
+│       │   ├── Cronograma del Proyecto.jpg
+│       │   ├── Diagrama de Arquitectura.jpg
+│       │   ├── Diagrama de roles de Cowsmo.png
+│       │   ├── Diagrama de Roles de Usuario.jpeg
+│       │   ├── Estructura Organizacional.jpg
+│       │   └── Portada del juego.jpeg
+│       │
+│       ├── GameLogo.png
+│       ├── Logo sin fondo.png
+│       └── Logo.jpg
+│
+└── README.md
+```
+
+### Descripción de los directorios
+
+| Directorio o archivo | Descripción |
+|---|---|
+| `Docs/` | Contiene recursos relacionados con la documentación del proyecto. |
+| `Docs/image/` | Almacena los recursos gráficos utilizados en el repositorio y el README. |
+| `Docs/image/Colors/` | Contiene las imágenes de las paletas de colores oficiales del proyecto. |
+| `Docs/image/Diagramas/` | Almacena los diagramas, modelos visuales, cronograma y portada del videojuego. |
+| `GameLogo.png` | Logotipo de Cowsmo: Space Rescue. |
+| `Logo sin fondo.png` | Logotipo de Orbital Create. |
+| `Logo.jpg` | Recurso gráfico adicional de identidad del proyecto. |
+| `README.md` | Archivo principal de presentación y documentación del repositorio. |
+
+### Organización de los recursos gráficos
+
+Los recursos visuales se mantienen separados de acuerdo con su finalidad, permitiendo reutilizarlos en la documentación y facilitar su mantenimiento.
+
+Las imágenes se referencian desde el README mediante rutas relativas al directorio raíz del repositorio, conservando su ubicación original.
+
+## Requisitos previos
+
+Para trabajar con Cowsmo: Space Rescue es necesario contar con las herramientas de desarrollo correspondientes a cada componente del ecosistema.
+
+### Herramientas generales
+
+| Herramienta | Uso |
+|---|---|
+| Git | Control de versiones del proyecto. |
+| GitHub | Acceso al repositorio y colaboración entre desarrolladores. |
+| Docker | Contenedorización de los servicios del backend. |
+
+### Desarrollo del videojuego
+
+| Herramienta | Uso |
+|---|---|
+| Unity Hub | Administración de instalaciones y proyectos de Unity. |
+| Unity 6 | Motor de desarrollo del videojuego. |
+| Visual Studio o editor compatible | Edición y desarrollo de scripts en C#. |
+
+### Desarrollo de la aplicación móvil
+
+| Herramienta | Uso |
+|---|---|
+| Flutter SDK | Framework de desarrollo de la aplicación móvil. |
+| Dart SDK | Lenguaje de programación utilizado por Flutter. |
+| Android Studio | Entorno de desarrollo y herramientas para ejecutar la aplicación en Android. |
+
+### Desarrollo de la aplicación web progresiva
+
+| Herramienta | Uso |
+|---|---|
+| Node.js | Entorno de ejecución necesario para el ecosistema de herramientas de React. |
+| npm | Administración de dependencias y paquetes. |
+| React | Biblioteca de desarrollo de interfaces web. |
+| Navegador web actualizado | Ejecución y validación de la aplicación web progresiva. |
+
+### Desarrollo del backend y bases de datos
+
+| Herramienta | Uso |
+|---|---|
+| Python | Lenguaje de programación del backend. |
+| FastAPI | Framework para el desarrollo de la API REST. |
+| MongoDB | Base de datos principal de la API. |
+| MySQL | Base de datos complementaria del videojuego. |
+| Docker | Ejecución de servicios contenerizados. |
+
+### Consideraciones adicionales
+
+1. Es necesario contar con conexión a Internet para descargar dependencias, acceder al repositorio y utilizar los servicios remotos.
+2. Se requiere acceso al repositorio de GitHub para obtener el código fuente.
+3. Las versiones específicas de las herramientas deberán corresponder con las configuraciones y dependencias establecidas en cada componente del proyecto.
+4. Para utilizar los servicios desplegados en la nube será necesario contar con la configuración y los permisos correspondientes.
+
+## Instalación
+
+Sigue los siguientes pasos para obtener el código fuente del proyecto y preparar el entorno de desarrollo.
+
+## Configuración
+
+Cowsmo: Space Rescue requiere configurar los servicios del backend, las conexiones a las bases de datos y los mecanismos de autenticación para permitir la comunicación entre el videojuego, la aplicación móvil y la PWA.
+
+### 1. Variables de entorno
+
+El backend utilizará variables de entorno para administrar la configuración de sus servicios y conexiones.
+
+A continuación, se presenta una propuesta de las principales variables de configuración:
+
+```env
+# Configuración del servidor
+HOST=
+PORT=
+
+# Configuración de seguridad
+JWT_SECRET_KEY=
+ACCESS_TOKEN_EXPIRE_MINUTES=
+REFRESH_TOKEN_EXPIRE_DAYS=
+
+# Conexión a MongoDB
+MONGODB_URI=
+MONGODB_DATABASE=
+
+# Conexión a MySQL
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=
+MYSQL_PASSWORD=
+MYSQL_DATABASE=
+
+# Configuración de la aplicación
+ENVIRONMENT=
+```
+
+### 2. Configuración de las bases de datos
+
+El ecosistema utiliza dos sistemas de almacenamiento con responsabilidades diferenciadas:
+
+**MongoDB**
+
+Se utilizará como base de datos principal de la API para almacenar información relacionada con:
+
+- Usuarios.
+- Contenido del ecosistema.
+- Puntuaciones.
+- Rankings.
+
+**MySQL**
+
+Se utilizará como base de datos complementaria para almacenar información estructurada relacionada con el videojuego.
+
+### 3. Configuración de autenticación
+
+El sistema de autenticación utilizará JSON Web Tokens (JWT) para gestionar el acceso de los usuarios a los diferentes productos del ecosistema.
+
+Se contemplan dos tipos de tokens:
+
+- **Access Token:** utilizado para autenticar las solicitudes realizadas a los servicios protegidos.
+- **Refresh Token:** utilizado para renovar las sesiones sin requerir que el usuario vuelva a iniciar sesión constantemente.
+
+### 4. Configuración de servicios
+
+Los servicios del backend utilizarán Docker para su contenedorización y Google Cloud Run como plataforma de ejecución en la nube.
+
+Las configuraciones de conexión y despliegue deberán establecerse mediante las variables de entorno correspondientes a cada servicio.
+
+### 5. Seguridad de la configuración
+
+Para proteger la información del proyecto, se deben considerar las siguientes medidas:
+
+- No publicar contraseñas, tokens ni credenciales reales.
+- Mantener los archivos `.env` fuera del control de versiones.
+- Proporcionar un archivo `.env.example` con las variables necesarias, sin valores sensibles.
+- Utilizar claves de autenticación seguras.
+- Restringir el acceso a las bases de datos y servicios según los permisos correspondientes.
+
+## Ejecución
+
+Una vez instaladas las herramientas, configuradas las variables de entorno y preparados los servicios correspondientes, se podrá iniciar cada componente del ecosistema de manera independiente.
+
+### 1. Backend — FastAPI
+
+Para iniciar el servidor de desarrollo, accede al directorio del backend y ejecuta:
+
+```bash
+uvicorn main:app --reload
+```
+
+El servidor iniciará en la dirección local configurada, permitiendo que los demás componentes realicen solicitudes a la API.
+
+### 2. Aplicación web progresiva — React
+
+Accede al directorio de la PWA e instala las dependencias del proyecto:
+
+```bash
+npm install
+```
+
+Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en la dirección local indicada por Vite.
+
+### 3. Aplicación móvil — Flutter
+
+Accede al directorio de la aplicación móvil y ejecuta:
+
+```bash
+flutter pub get
+```
+
+Para iniciar la aplicación en un dispositivo o emulador conectado:
+
+```bash
+flutter run
+```
+
+### 4. Videojuego — Unity
+
+Para ejecutar el videojuego:
+
+1. Abre Unity Hub.
+2. Selecciona la opción para agregar un proyecto existente.
+3. Busca el directorio del videojuego dentro del repositorio.
+4. Abre el proyecto utilizando Unity 6.
+5. Espera a que Unity importe los recursos y dependencias.
+6. Abre la escena principal y presiona el botón **Play** para iniciar la ejecución.
+
+### 5. Servicios mediante Docker
+
+Los servicios contenerizados podrán iniciarse mediante Docker Compose, una vez que se encuentre disponible el archivo de configuración correspondiente.
+
+```bash
+docker compose up --build
+```
+
+Para detener los servicios:
+
+```bash
+docker compose down
+```
+
+### Consideraciones de ejecución
+
+- El backend debe estar disponible para permitir la comunicación con los clientes.
+- La PWA y la aplicación móvil deben utilizar la dirección de la API configurada para el entorno correspondiente.
+- Las bases de datos deben encontrarse disponibles antes de ejecutar las operaciones que requieran persistencia.
+- El videojuego podrá ejecutarse de manera local y sincronizar su información cuando tenga conexión con los servicios del ecosistema.
+
+## Uso del sistema
+
+Cowsmo: Space Rescue ofrece diferentes formas de interacción mediante su videojuego, aplicación móvil y aplicación web progresiva. Cada producto proporciona funcionalidades específicas y comparte información mediante una cuenta de usuario centralizada.
+
+### 1. Acceso al ecosistema
+
+Los usuarios podrán acceder a los productos disponibles utilizando una cuenta compartida.
+
+El proceso general contempla:
+
+1. Ingresar al videojuego, aplicación móvil o PWA.
+2. Registrarse o iniciar sesión con una cuenta.
+3. Acceder a las funcionalidades disponibles según el producto.
+4. Consultar la información personal y los datos sincronizados del ecosistema.
+
+### 2. Uso del videojuego
+
+El videojuego permite disfrutar de una experiencia de aventura y exploración 2.5D protagonizada por Moo-ry.
+
+Los jugadores podrán:
+
+- Explorar los diferentes escenarios y niveles.
+- Interactuar con personajes y elementos del entorno.
+- Recolectar recursos y objetos.
+- Participar en actividades relacionadas con la recuperación ambiental.
+- Consultar su progreso y puntuaciones.
+- Guardar su avance localmente y sincronizarlo con la nube.
+
+### 3. Uso de la aplicación móvil
+
+La aplicación móvil permite acceder a funcionalidades complementarias del videojuego.
+
+Los usuarios podrán:
+
+- Consultar y administrar su perfil.
+- Visualizar estadísticas y progreso.
+- Consultar rankings.
+- Acceder a consejos y actividades ambientales.
+- Consultar información sobre reciclaje y sostenibilidad.
+- Dar seguimiento a sus acciones sostenibles.
+
+### 4. Uso de la aplicación web progresiva (PWA)
+
+La PWA proporciona acceso al ecosistema desde un navegador web.
+
+Entre sus funcionalidades se encuentran:
+
+- Iniciar sesión y consultar el perfil.
+- Visualizar estadísticas y rankings.
+- Consultar contenido educativo.
+- Publicar contenido sujeto a revisión administrativa.
+- Acceder a Wiki-Cowsmo.
+- Consultar contenido previamente almacenado sin conexión a Internet.
+
+### 5. Sincronización de información
+
+Los tres productos compartirán información mediante el backend y los servicios de almacenamiento del ecosistema.
+
+Esto permitirá mantener disponibles los datos relacionados con las cuentas, estadísticas, puntuaciones y progreso de los jugadores, de acuerdo con los mecanismos de sincronización implementados.
+
+### 6. Administración de contenido
+
+El ecosistema contempla la participación de los usuarios mediante la publicación de contenido educativo.
+
+Las publicaciones estarán sujetas a un proceso de revisión administrativa antes de su disponibilidad dentro de la plataforma.
+
+## Pruebas
+
+El proyecto contempla diferentes actividades de pruebas orientadas a comprobar el correcto funcionamiento de sus productos, validar la integración de sus servicios y detectar posibles errores durante el desarrollo.
+
+### 1. Pruebas del videojuego
+
+Se realizarán pruebas para verificar:
+
+- Funcionamiento de las mecánicas de juego.
+- Movimiento e interacción de los personajes.
+- Funcionamiento de los niveles y sistemas de progresión.
+- Registro y conservación del progreso.
+- Sincronización de información con los servicios del ecosistema.
+- Compatibilidad con las plataformas previstas.
+
+### 2. Pruebas de la aplicación móvil
+
+Se contemplan pruebas para validar:
+
+- Registro e inicio de sesión.
+- Administración del perfil de usuario.
+- Comunicación con el backend.
+- Consulta de estadísticas y rankings.
+- Visualización del contenido educativo.
+- Funcionamiento de las funcionalidades complementarias.
+
+### 3. Pruebas de la aplicación web progresiva
+
+Se verificarán los siguientes aspectos:
+
+- Funcionamiento de la autenticación.
+- Navegación entre las diferentes secciones.
+- Consulta y administración de información.
+- Visualización de estadísticas y rankings.
+- Publicación y revisión de contenido.
+- Acceso a Wiki-Cowsmo.
+- Disponibilidad parcial de contenido sin conexión a Internet.
+
+### 4. Pruebas del backend y servicios
+
+Se realizarán pruebas para comprobar:
+
+- Funcionamiento de los endpoints de la API REST.
+- Validación de solicitudes y respuestas.
+- Autenticación mediante JWT.
+- Comunicación con MongoDB y MySQL.
+- Almacenamiento y recuperación de información.
+- Sincronización de datos entre los productos.
+- Manejo de errores y respuestas del servidor.
+
+### 5. Pruebas de integración
+
+Se comprobará la comunicación entre el videojuego, la aplicación móvil, la PWA y el backend, verificando que la información compartida se procese correctamente.
+
+También se evaluará la sincronización de cuentas, estadísticas, puntuaciones y progreso de los jugadores.
+
+### 6. Tipos de pruebas contempladas
+
+| Tipo de prueba | Propósito |
+|---|---|
+| Pruebas unitarias | Verificar el funcionamiento individual de componentes y funciones. |
+| Pruebas de integración | Comprobar la comunicación entre los diferentes servicios y productos. |
+| Pruebas funcionales | Validar que las funcionalidades cumplan con los requerimientos establecidos. |
+| Pruebas de compatibilidad | Comprobar el funcionamiento en las plataformas previstas. |
+| Pruebas de aceptación | Evaluar que el sistema cumpla con las necesidades de los usuarios. |
+
+### 7. Registro de resultados
+
+Los resultados de las pruebas permitirán identificar errores, documentar incidencias y verificar las correcciones realizadas durante el desarrollo.
+
+Las actividades de validación estarán integradas en el proceso de trabajo del equipo mediante el seguimiento de tareas e incidencias.
