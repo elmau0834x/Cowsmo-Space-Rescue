@@ -761,4 +761,40 @@ Este archivo permitirá identificar:
 - Cambios en la arquitectura.
 - Modificaciones relevantes en la documentación.
 
+## Licencia
 
+Actualmente, **Cowsmo: Space Rescue** no cuenta con una licencia de software especificada en el repositorio.
+
+Por este motivo, no debe asumirse que el código fuente, los recursos gráficos, los personajes, los diseños o la documentación pueden copiarse, modificarse o distribuirse libremente.
+
+La licencia correspondiente deberá ser definida por el equipo e incorporada al repositorio mediante un archivo `LICENSE`, donde se establecerán las condiciones de uso, modificación y distribución del proyecto.
+
+Para solicitar autorización sobre el uso de los materiales del proyecto, se recomienda contactar directamente con el equipo de desarrollo.
+
+---
+
+## Contacto
+
+Para consultas, comentarios, sugerencias o información relacionada con **Cowsmo: Space Rescue**, puedes contactar con el equipo de desarrollo mediante los siguientes medios:
+
+**Repositorio del proyecto**
+
+[Proyecto Integrador - Cowsmo: Space Rescue](https://github.com/elmau0834x/Proyecto-Integrador-Cowsmo-Space-Rescue)
+
+**Sitio web del proyecto**
+
+[GitHub Pages - Cowsmo: Space Rescue](https://elmau0834x.github.io/Proyecto-Integrador-Cowsmo-Space-Rescue/index.html)
+
+**Equipo de desarrollo**
+
+| Integrante | Perfil de GitHub |
+|---|---|
+| Mauricio Rosales Gabriel | [@elmau0834x](https://github.com/elmau0834x) |
+| Carlos Daniel García Pluma | [@DanielGarciaPluma](https://github.com/DanielGarciaPluma) |
+| Brisa Nallely García Gregorio | [@Brisgregorio](https://github.com/Brisgregorio) |
+
+---
+
+**Cowsmo: Space Rescue**
+
+*Reciclar, recuperar y reconstruir.*
