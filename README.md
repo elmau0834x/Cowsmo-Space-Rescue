@@ -662,3 +662,53 @@ También se evaluará la sincronización de cuentas, estadísticas, puntuaciones
 Los resultados de las pruebas permitirán identificar errores, documentar incidencias y verificar las correcciones realizadas durante el desarrollo.
 
 Las actividades de validación estarán integradas en el proceso de trabajo del equipo mediante el seguimiento de tareas e incidencias.
+
+## Equipo de desarrollo
+
+Cowsmo: Space Rescue es desarrollado por un equipo de tres integrantes que colaboran en las actividades de análisis, diseño, programación, documentación y pruebas del ecosistema.
+
+La distribución de responsabilidades considera los roles establecidos dentro del marco de trabajo SCRUM y las áreas de especialización de cada integrante.
+
+### 1. Integrantes del equipo
+
+| Integrante | Rol SCRUM | Área de responsabilidad |
+|---|---|---|
+| **Mauricio Rosales Gabriel** | Product Owner y Developer | Gestión del producto y desarrollo Backend. |
+| **Carlos Daniel García Pluma** | Scrum Master y Developer | Gestión SCRUM, desarrollo Frontend y diseño. |
+| **Brisa Nallely García Gregorio** | Developer | Documentación, pruebas y aseguramiento de calidad. |
+
+### 2. Responsabilidades por integrante
+
+**Mauricio Rosales Gabriel — Product Owner y Developer**
+
+Responsable de representar las necesidades del producto, gestionar y priorizar el Product Backlog y orientar el desarrollo hacia los objetivos establecidos. También participa en la implementación del backend y los servicios de integración.
+
+**Carlos Daniel García Pluma — Scrum Master y Developer**
+
+Responsable de facilitar la aplicación de SCRUM, promover el cumplimiento de sus principios y apoyar la coordinación del equipo. También participa en el desarrollo de interfaces, diseño visual y experiencia de usuario.
+
+**Brisa Nallely García Gregorio — Developer**
+
+Responsable de elaborar y mantener la documentación del proyecto, participar en la definición de requisitos, diseñar y ejecutar pruebas, registrar incidencias y contribuir al aseguramiento de calidad.
+
+Los tres integrantes forman parte del equipo Developers de SCRUM y participan en la construcción y validación de los incrementos del producto.
+
+### 3. Contribuciones por integrante
+
+Para visualizar la participación de cada integrante en el desarrollo del proyecto, se presenta el total de commits realizados por cada miembro dentro del repositorio de GitHub.
+
+| Integrante | Rol | Total de commits |
+|---|---|---:|
+| Mauricio Rosales Gabriel | Product Owner / Developer | Por determinar |
+| Carlos Daniel García Pluma | Scrum Master / Developer | Por determinar |
+| Brisa Nallely García Gregorio | Developer | Por determinar |
+
+Los totales se obtendrán del historial de Git, considerando los commits asociados a la identidad de cada integrante.
+
+### 4. Perfiles de GitHub
+
+| Integrante | Perfil |
+|---|---|
+| Mauricio Rosales Gabriel | [@elmau0834x](https://github.com/elmau0834x) |
+| Carlos Daniel García Pluma | [@DanielGarciaPluma](https://github.com/DanielGarciaPluma) |
+| Brisa Nallely García Gregorio | [@Brisgregorio](https://github.com/Brisgregorio) |
